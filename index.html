@@ -4,18 +4,14 @@
   <!-- ========== META & TITLE ========== -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2D Orthophoto Map – 31 Admiral Close, Telford | Drone on the Farm</title>
-  <meta name="description" content="Interactive 2D orthophoto map of 31 Admiral Close, Telford – Residential drone mapping project by Drone on the Farm.">
+  <title>IDEAL 10t Combine - Geringhoff 40' TruFlex Air Header Harvesting Beans | Drone on the Farm</title>
+  <meta name="description" content="Watch the IDEAL 10t combine with Geringhoff 40-foot TruFlex Air header in action, harvesting beans with precision aerial footage by Drone on the Farm.">
 
   <!-- ========== FAVICON ========== -->
   <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
 
   <!-- ========== FONTS ========== -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet" />
-
-  <!-- ========== LEAFLET MAP LIBRARY ========== -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
   <!-- ========== STYLES ========== -->
   <style>
@@ -56,24 +52,12 @@
     }
 
     .header-title {
-      font-size: 1.05rem;
+      font-size: 1rem;
       font-weight: 700;
       color: #16a34a;
       text-align: center;
       flex-grow: 1;
-    }
-
-    .sub-info {
-      display: block;
-      font-size: 0.75rem;
-      color: #bbb;
-      font-weight: 400;
-      margin-top: 0.2rem;
-    }
-
-    .sub-info:last-child {
-      color: #999;
-      font-style: italic;
+      line-height: 1.4rem;
     }
 
     .header-link {
@@ -93,13 +77,13 @@
     section.video-section {
       text-align: center;
       background: #fff;
-      padding: 15px;
+      padding: 20px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
 
     section.video-section h2 {
-      font-size: 1rem;
-      margin-bottom: 10px;
+      font-size: 1.1rem;
+      margin-bottom: 12px;
       color: #16a34a;
     }
 
@@ -121,35 +105,6 @@
       height: 100%;
     }
 
-    /* ========== DOWNLOAD BUTTON (FLOATING) ========== */
-    .download-floating {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      z-index: 999;
-      background: rgba(255,255,255,0.95);
-      backdrop-filter: blur(6px);
-      padding: 0.55rem 1rem;
-      border-radius: 8px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: #16a34a;
-      text-decoration: none;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-    }
-
-    /* ========== MAP ========== */
-    main#map {
-      flex-grow: 1;
-      height: calc(100vh - 80px);
-      width: 100%;
-      position: relative;
-    }
-
-    .leaflet-control-zoom {
-      display: none;
-    }
-
     /* ========== RESPONSIVE STYLES ========== */
     @media (max-width: 500px) {
       header {
@@ -167,17 +122,6 @@
       .header-link {
         font-size: 1rem;
       }
-
-      .sub-info {
-        font-size: 0.7rem;
-      }
-
-      .download-floating {
-        font-size: 0.8rem;
-        padding: 0.5rem 0.9rem;
-        bottom: 15px;
-        left: 15px;
-      }
     }
   </style>
 </head>
@@ -187,9 +131,7 @@
   <header>
     <a href="https://www.droneonthefarm.co.uk" class="header-link" target="_blank" rel="noopener noreferrer">Drone on the Farm</a>
     <div class="header-title">
-      2D Map - 31 Admiral Close
-      <span class="sub-info">16th July 2025 - TF1 6BJ</span>
-      <span class="sub-info">Interactive 2D orthophoto map – Residential drone mapping project by Drone on the Farm.</span>
+      IDEAL 10t Combine<br>Geringhoff 40' TruFlex Air Header Harvesting Beans
     </div>
   </header>
 
@@ -206,32 +148,6 @@
       </iframe>
     </div>
   </section>
-
-  <!-- ========== MAP SECTION ========== -->
-  <main id="map"></main>
-
-  <!-- ========== DOWNLOAD BUTTON ========== -->
-  <a href="images/orthophoto.png" class="download-floating" download aria-label="Download orthophoto map of 31 Admiral Close">Download Map</a>
-
-  <!-- ========== SCRIPT ========== -->
-  <script>
-    const imageUrl = 'images/orthophoto.png';
-    const imageBounds = [[0, 0], [1500, 1500]];
-
-    const map = L.map('map', {
-      crs: L.CRS.Simple,
-      minZoom: -5,
-      maxZoom: 4,
-      zoomSnap: 0.1,
-      zoomDelta: 0.2,
-      wheelPxPerZoomLevel: 60,
-      zoomControl: false
-    });
-
-    L.imageOverlay(imageUrl, imageBounds).addTo(map);
-    map.setView([750, 750], 0.7);
-    // Center and zoom manually
-  </script>
 
 </body>
 </html>
