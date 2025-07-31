@@ -23,7 +23,8 @@
 
     body {
       font-family: 'Inter', sans-serif, system-ui, -apple-system;
-      background-color: #f8f8f8;
+      background: url('images/bg-drone.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: #111;
       display: flex;
       flex-direction: column;
@@ -36,25 +37,26 @@
       to { opacity: 1; }
     }
 
-    /* ========== HEADER SECTION ========== */
+    /* ========== GLASS HEADER ========== */
     header {
       position: relative;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0.6rem 1.2rem;
-      background: rgba(0, 0, 0, 0.6);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      border-radius: 0 0 12px 12px;
+      padding: 0.8rem 1.5rem;
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 0 0 16px 16px;
       z-index: 1000;
     }
 
     .header-title {
       font-size: 1rem;
       font-weight: 700;
-      color: #16a34a;
+      color: #000;
       text-align: center;
       flex-grow: 1;
       line-height: 1.4rem;
@@ -62,7 +64,7 @@
 
     .header-link {
       font-family: 'Pacifico', cursive;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       font-weight: 600;
       color: #16a34a;
       text-decoration: none;
@@ -73,18 +75,25 @@
       opacity: 0.8;
     }
 
-    /* ========== VIDEO SECTION ========== */
+    /* ========== GLASS VIDEO CARD ========== */
     section.video-section {
-      text-align: center;
-      background: #fff;
+      max-width: 900px;
+      width: 90%;
+      margin: 40px auto;
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
       padding: 20px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      text-align: center;
     }
 
     section.video-section h2 {
-      font-size: 1.1rem;
-      margin-bottom: 12px;
-      color: #16a34a;
+      font-size: 1.2rem;
+      margin-bottom: 14px;
+      color: #000;
+      font-weight: 700;
     }
 
     section.video-section .video-container {
@@ -93,8 +102,8 @@
       height: 0;
       overflow: hidden;
       max-width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
     }
 
     section.video-section iframe {
@@ -103,6 +112,7 @@
       left: 0;
       width: 100%;
       height: 100%;
+      border-radius: 12px;
     }
 
     /* ========== RESPONSIVE STYLES ========== */
@@ -111,7 +121,7 @@
         flex-direction: column;
         gap: 0.4rem;
         text-align: center;
-        padding: 0.9rem 1rem;
+        padding: 1rem;
       }
 
       .header-title {
