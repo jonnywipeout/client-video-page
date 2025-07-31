@@ -36,7 +36,7 @@
       position: relative;
       display: flex;
       align-items: center;
-      justify-content: center; /* Center content */
+      justify-content: center;
       padding: 0.8rem 1.5rem;
       background: rgba(255, 255, 255, 0.25);
       backdrop-filter: blur(12px);
@@ -71,29 +71,21 @@
       text-align: center;
     }
 
-    /* ===== Fullscreen Video Section ===== */
+    /* ===== Glass Video Card ===== */
     section.video-section {
       width: 95%;
       max-width: 1600px;
-      margin: 20px auto;
+      margin: 30px auto;
       background: rgba(255, 255, 255, 0.3);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
       padding: 10px;
       border-radius: 16px;
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-      text-align: center;
-      height: calc(100vh - 100px); /* Nearly full screen */
+      height: calc(100vh - 120px);
       display: flex;
       flex-direction: column;
       justify-content: center;
-    }
-
-    section.video-section h2 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-      color: #000;
-      font-weight: 700;
     }
 
     section.video-section .video-container {
@@ -114,7 +106,6 @@
       border-radius: 12px;
     }
 
-    /* ===== Responsive ===== */
     @media (max-width: 500px) {
       header {
         flex-direction: column;
@@ -140,13 +131,12 @@
   <header>
     <a href="https://www.droneonthefarm.co.uk" class="header-link" target="_blank" rel="noopener noreferrer">Drone on the Farm</a>
     <div class="header-title">
-      IDEAL 10t Combine<br>Geringhoff 40' TruFlex Air Header 
+      IDEAL 10t Combine<br>Geringhoff 40' TruFlex Air Header Harvesting Beans
     </div>
   </header>
 
-  <!-- ===== VIDEO SECTION ===== -->
+  <!-- ===== VIDEO SECTION (No Heading Text) ===== -->
   <section class="video-section">
-    <h2>Project Video</h2>
     <div class="video-container">
       <iframe 
         src="https://www.youtube.com/embed/YZDXju0DThI" 
